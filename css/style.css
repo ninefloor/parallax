@@ -48,6 +48,10 @@ a {
   text-transform: capitalize;
 }
 
+#nav ul li.active a{
+  color: #001068;
+}
+
 #contents {
   text-align: center;
   color: #fff;

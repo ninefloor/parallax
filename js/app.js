@@ -12,4 +12,28 @@ nav.click(function(e){
   console.log(offset);
 
   $("html, body").animate({scrollTop: offset}, 600, "easeInOutExpo");
+
+  // 브라우저 창을 스크롤 할 때 (이벤트)
+  $(window).scroll(function(){
+    let wScroll = $(this).scrollTop(); // 현재의 scrollTop 값을 변수에 할당
+    if(wScroll >= cont.eq(0).offset().top){
+      nav.removeClass("active");
+      nav.eq(0).addClass("active");
+    } if(wScroll >= cont.eq(1).offset().top){
+      nav.removeClass("active");
+      nav.eq(1).addClass("active");
+    } if(wScroll >= cont.eq(2).offset().top){
+      nav.removeClass("active");
+      nav.eq(2).addClass("active");
+    } if(wScroll >= cont.eq(3).offset().top){
+      nav.removeClass("active");
+      nav.eq(3).addClass("active");
+    } if(wScroll >= cont.eq(4).offset().top){
+      nav.removeClass("active");
+      nav.eq(4).addClass("active");
+    } if(wScroll >= cont.eq(5).offset().top){
+      nav.removeClass("active");
+      nav.eq(5).addClass("active");
+    }
+  })
 })
