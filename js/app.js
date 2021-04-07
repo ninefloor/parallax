@@ -11,5 +11,5 @@ nav.click(function(e){
   let offset = section.offset().top; // 각 컨텐츠의 오프셋 값을 할당
   console.log(offset);
 
-  $("html, body").animate({scrollTop: offset}, 600, "swing");
+  $("html, body").animate({scrollTop: offset}, 600, "easeInOutExpo");
 })
