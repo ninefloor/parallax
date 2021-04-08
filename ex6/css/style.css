@@ -1,0 +1,129 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav */
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 61px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+#nav.on {
+  position: fixed;
+  top: -61px;
+}
+
+#nav h1 {
+  float: left;
+  color: #fff;
+  font-size: 40px;
+  padding: 5px 5px 5px 15px;
+  font-family: 'Abel'
+}
+
+/* dot */
+#dot{
+  position: fixed;
+  top: 50%; right: 20px;
+  transform: translateY(-50%);
+}
+
+#dot ul li{
+  width: 20px; 
+  height: 20px;
+  margin: 8px;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0);
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+#dot ul li a{
+  color: #fff;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0; left: 0;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#dot ul li a em{
+  display: none;
+}
+
+#dot ul li.active{
+  box-shadow: 0 0 0 2px rgba(255,255,255,1);
+}
+
+#dot ul li.active a{
+  transform: scale(0.4);
+}
+
+/* contents */
+#contents {
+  text-align: center;
+  color: #fff;
+}
+
+#contents>div {
+  height: 100vh;
+  line-height: 100vh;
+}
+
+#contents>div h2 {
+  font-size: 90px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+#contents>div h2 strong {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* section */
+#section1 {
+  background: radial-gradient(ellipse farthest-corner at center bottom, #3AA17E, #00537E);
+}
+
+#section2 {
+  background: radial-gradient(ellipse farthest-corner at center top, #A3A1FF, #3A3897);
+}
+
+#section3 {
+  background: radial-gradient(ellipse farthest-corner at center top, #29ABE2, #4F00BC);
+}
+
+#section4 {
+  background: radial-gradient(ellipse farthest-corner at center top, #FF5300, #45145A);
+}
+
+#section5 {
+  background: radial-gradient(ellipse farthest-corner at center bottom, #852D91, #312A6C);
+}
+
+#section6 {
+  background: radial-gradient(ellipse farthest-corner at center top, #FBB03B, #D4145A);
+}
