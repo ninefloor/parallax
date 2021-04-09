@@ -1,0 +1,169 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav */
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 61px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+#nav.on {
+  position: fixed;
+  top: -61px;
+}
+
+#nav h1 {
+  float: left;
+  color: #fff;
+  font-size: 40px;
+  padding: 5px 5px 5px 15px;
+  font-family: 'Abel'
+}
+
+/* dot */
+#dot{
+  position: fixed;
+  top: 50%; right: 20px;
+  transform: translateY(-50%);
+}
+
+#dot li{
+  width: 20px;
+  height: 20px;
+  margin: 15px 12px;
+  position: relative;
+}
+
+#dot li a{
+  position: absolute;
+  top: 0; left: 0;
+  background-color: rgba(255,255,255,0.3);
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+#dot li a::after{
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #fff;
+  transform: scale(3);
+  opacity: 0;
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s 0.3s;
+}
+
+#dot li.active a::after{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#dot li a em{
+  display: none;
+}
+
+/* contents */
+#contents {
+  text-align: center;
+  color: #fff;
+}
+
+#contents>div {
+  height: 100vh;
+  line-height: 100vh;
+}
+
+#contents>div h2 {
+  font-size: 90px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+#contents>div h2 strong {
+  font-weight: 700;
+}
+
+/* section */
+#section1 {
+  background: radial-gradient(ellipse farthest-corner at center bottom, #3AA17E, #00537E);
+}
+
+#section2 {
+  background: radial-gradient(ellipse farthest-corner at center top, #A3A1FF, #3A3897);
+}
+
+#section3 {
+  background: radial-gradient(ellipse farthest-corner at center top, #29ABE2, #4F00BC);
+}
+
+#section4 {
+  background: radial-gradient(ellipse farthest-corner at center top, #FF5300, #45145A);
+}
+
+#section5 {
+  background: radial-gradient(ellipse farthest-corner at center bottom, #852D91, #312A6C);
+}
+
+#section6 {
+  background: radial-gradient(ellipse farthest-corner at center top, #FBB03B, #D4145A);
+}
+
+/* text animation */
+
+#contents>div h2{
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+
+#contents>div.show h2{
+  opacity: 1;
+  transform: none;
+}
+
+
+#section1.show h2{
+  animation: bounceInRight 1s;
+}
+#section2.show h2{
+  animation: rubberBand 1s;
+}
+#section3.show h2{
+  animation: zoomInUp 1s;
+}
+#section4.show h2{
+  animation: flipInX 1s;
+}
+#section5.show h2{
+  animation: jello 1s;
+}
+#section6.show h2{
+  animation: rollIn 1s;
+}
