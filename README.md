@@ -7,3 +7,4 @@
 [#8 ~ 9](https://ninefloor.github.io/parallax/ex6/)  
 [#10](https://ninefloor.github.io/parallax/ex7/)  
 [#11](https://ninefloor.github.io/parallax/ex8/)  
+[#12](https://ninefloor.github.io/parallax/ex9/)  
